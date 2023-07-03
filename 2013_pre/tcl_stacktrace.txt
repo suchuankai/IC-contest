@@ -1,0 +1,18 @@
+Mon Nov 14 ¤W¤È 10:38:49 ?????? 2022
+Trace back: can't read "::vsimPriv(tbarBtnIgnore)": no such element in array
+    while executing
+"if { ! $::vsimPriv(tbarBtnIgnore) } {
+            ButtonInvoke $b $m
+         }"
+    ("release" arm line 8)
+    invoked from within
+"switch $a {
+      "enter" {
+         if { [info exists bmenuDC($b,$m)] } {
+            set bmenuHotspotX [expr {[winfo reqwidth $b] - $downArrow(w2) -..."
+    (procedure "Tbar::BMenu::Action" line 8)
+    invoked from within
+"Tbar::BMenu::Action release .main_pane.wave.interior.cs.body.pw.wf.grid.message,name.quick_access_f.b1 .main_pane.wave.interior.cs.body.pw.wf.grid.mes..."
+    (command bound to event)
+  <2: ::tkerror {can't read "::vsimPriv(tbarBtnIgnore)": no such element in array}
+  <1: ::bgerror {can't read "::vsimPriv(tbarBtnIgnore)": no such element in array}
