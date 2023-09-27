@@ -161,10 +161,8 @@ always@(posedge clk or posedge rst) begin
             end
             STOP:begin
                 F_CLE_B <= 0;
-                page_cnt <= page_cnt + 1;
-            end
-            PAGEADD:begin
-                
+                if(!F_CLE_B)
+                    page_cnt <= page_cnt + 1;
             end
         endcase
     end
@@ -191,7 +189,7 @@ always@(*)begin
             nt_state = STOP;
         end
         STOP:begin
-            nt_state = PAGEADD;
+            nt_state = (!F_CLE_B)? PAGEADD : STOP;
         end
         PAGEADD: nt_state = (F_RB_B)? COMM : PAGEADD;
     endcase
