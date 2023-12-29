@@ -1,6 +1,4 @@
 `define F_MEM "p2_mem.dat"
-
-
 `ifdef p1
   `define F_MEM "p1_mem.dat"
 `endif
