@@ -280,7 +280,7 @@ end
 always@(*) begin
 	case(crState)
 		INIT: begin
-			ntState = READ_16;   // ROM needs two cycles to get value.
+			ntState = READ_16;
 		end
 		READ_16:begin
 			if(cnt==5'd16) begin
