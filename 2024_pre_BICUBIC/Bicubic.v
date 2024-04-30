@@ -265,7 +265,6 @@ always@(posedge CLK) begin
 end
 
 
-// Finish signal
 always@(posedge CLK) begin
 	if(RST) begin
 		skip <= 1'b0;
